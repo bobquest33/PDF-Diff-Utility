@@ -16,6 +16,7 @@ Deploy Requirements using command
  pip install -r requirements.txt
 
 - Without Python Installed
+Install python redistributable from https://github.com/bobquest33/Win-7-Python-2.7.9-Distribution.git
    	
 Type at command prompt
  venv\activate
