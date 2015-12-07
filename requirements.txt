@@ -1,0 +1,7 @@
+chardet==2.3.0
+md5==4.2.3
+pdfminer==20140328
+pdfminer2==20151206
+pdfx==1.2.1
+pyPdf==1.13
+six==1.10.0
