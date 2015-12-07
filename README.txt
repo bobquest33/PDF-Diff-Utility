@@ -16,13 +16,17 @@ Deploy Requirements using command
  pip install -r requirements.txt
 
 - Without Python Installed
-Install python redistributable from https://github.com/bobquest33/Win-7-Python-2.7.9-Distribution.git
-   	
+1. Install python redistributable from https://github.com/bobquest33/Win-7-Python-2.7.9-Distribution.git
+2. Open orig-prefix.txt in venv\Lib and update the path where you have extracted Python-2.7.9 distribution.
+
+Execution:
+
+Open command prompt and go to the path where this utility is present.
+
 Type at command prompt
  venv\activate
 
 
-Execution:
 python comparePdf.py <left>.pdf <right>.pdf
 
 Sample Output:
