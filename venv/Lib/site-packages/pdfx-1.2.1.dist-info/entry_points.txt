@@ -1,3 +1,0 @@
-[console_scripts]
-pdfx = pdfx.cli:main
-
