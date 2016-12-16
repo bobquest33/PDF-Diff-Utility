@@ -5,29 +5,26 @@ It is a simple utility which helps to do a text level and PDF level comparison b
 
 Requirement:
 Python 2.7.9
-Note - In case you do not have Python installed this distribution comes bundled with a version of python for Windows 7
+https://www.python.org/downloads/release/python-279/
 
-
+For library requirements please refer requirements.txt
 
 Installation:
 - With Python Installed
 
+Download the utility using git:
+ git clone https://github.com/bobquest33/PDF-Diff-Utility.git
+
+
 Deploy Requirements using command
  pip install -r requirements.txt
 
-- Without Python Installed
-1. Install python redistributable from https://github.com/bobquest33/Win-7-Python-2.7.9-Distribution.git
-2. Open orig-prefix.txt in venv\Lib and update the path where you have extracted Python-2.7.9 distribution.
 
 Execution:
 
-Open command prompt and go to the path where this utility is present.
+Open command prompt and go to the path where this utility has been downloaded any type:
 
-Type at command prompt
- venv\activate
-
-
-python comparePdf.py <left>.pdf <right>.pdf
+ python comparePdf.py <left>.pdf <right>.pdf
 
 Sample Output:
 
@@ -46,6 +43,6 @@ In Future:
 - Improve Diff comparison functionality
 - Image comparison in PDFs
 - Batch comparison
- 
+
 
 

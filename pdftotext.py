@@ -3,6 +3,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from cStringIO import StringIO
+import codecs
 
 class PdfToText(object):
     ROBOT_LIBRARY_SCOPE = 'Global'
@@ -13,11 +14,11 @@ class PdfToText(object):
     def convert_pdf_to_txt(self,path):
         rsrcmgr = PDFResourceManager()
         retstr = StringIO()
-        #codec = 'utf-8'
         imagewriter = None
         codec = 'utf-8'
+        reader = codecs.getreader(codec)
         laparams = LAParams()
-        device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams,imagewriter=imagewriter)
+        device = TextConverter(rsrcmgr, reader(retstr), codec=codec, laparams=laparams,imagewriter=imagewriter)
         fp = file(path, 'rb')
         interpreter = PDFPageInterpreter(rsrcmgr, device)
         password = ""
@@ -36,8 +37,9 @@ class PdfToText(object):
         rsrcmgr = PDFResourceManager()
         retstr = StringIO()
         codec = 'utf-8'
+        reader = codecs.getreader(codec)
         laparams = LAParams()
-        device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
+        device = TextConverter(rsrcmgr, reader(retstr), codec=codec, laparams=laparams)
         fp = file(path, 'rb')
         interpreter = PDFPageInterpreter(rsrcmgr, device)
         password = ""

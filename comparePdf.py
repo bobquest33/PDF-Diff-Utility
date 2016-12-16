@@ -20,10 +20,12 @@ print rmetadata
 
 p2t=PdfToText()
 
-textOfFile1=p2t.convert_pdf_to_txt(lfile).decode('utf-8').encode('ascii','ignore')
-textOfFile2=p2t.convert_pdf_to_txt(rfile).decode('utf-8').encode('ascii','ignore')
-#print textOfFile1
-#print textOfFile2
+#textOfFile1=p2t.convert_pdf_to_txt(lfile).decode('utf-8').encode('ascii','ignore')
+#textOfFile2=p2t.convert_pdf_to_txt(rfile).decode('utf-8').encode('ascii','ignore')
+textOfFile1=p2t.convert_pdf_to_txt(lfile)
+textOfFile2=p2t.convert_pdf_to_txt(rfile)
+print textOfFile1
+print textOfFile2
 ##open first pdf file and save it as file1.pdf
 #pdffromUrl.open_pdf_from_url("http://www.seleniummaster.com/sitecontent/images/Selenium_Master_Test_Case_Base_Template.pdf","file1.pdf")
 ##open second pdf file and save it as file2.pdf
